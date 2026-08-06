@@ -1,0 +1,104 @@
+.rsk-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.rsk-skill-card {
+    border: 3px solid var(--ink);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 6px 6px 0 var(--ink);
+    transition:
+        transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.2s ease,
+        border-color 0.4s ease,
+        background-color 0.4s ease;
+}
+
+.rsk-skill-card:nth-child(odd) {
+    transform: rotate(-1deg);
+}
+
+.rsk-skill-card:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.rsk-skill-card:hover {
+    transform: translate(-3px, -3px) rotate(0deg);
+    box-shadow: 9px 9px 0 var(--ink);
+}
+
+.rsk-skill-card.white {
+    background: var(--surface);
+    color: var(--ink);
+}
+
+/* Yellow + coral cards must keep dark text in both themes */
+.rsk-skill-card.yellow {
+    background: var(--yellow);
+    color: var(--stamp-ink);
+}
+
+.rsk-skill-card.coral {
+    background: var(--coral);
+    color: var(--stamp-ink);
+}
+
+.rsk-skill-card.yellow h3,
+.rsk-skill-card.coral h3 {
+    color: var(--stamp-ink);
+}
+
+.rsk-skill-card h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 18px;
+    color: var(--ink);
+    transition: color 0.4s ease;
+}
+
+.rsk-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rsk-chip {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    border: 2px solid var(--stamp-ink);
+    border-radius: 999px;
+    padding: 6px 14px;
+    background: var(--canvas);
+    color: var(--ink);
+    transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        color 0.4s ease;
+}
+
+/* Chips inside white-tone cards get the standard ink border/text */
+.rsk-skill-card.white .rsk-chip {
+    border-color: var(--ink);
+    background: var(--canvas);
+    color: var(--ink);
+}
+
+/* Chips inside yellow/coral cards always keep the dark ink for contrast */
+.rsk-skill-card.yellow .rsk-chip,
+.rsk-skill-card.coral .rsk-chip {
+    background: rgba(255, 255, 255, 0.75);
+    border-color: var(--stamp-ink);
+    color: var(--stamp-ink);
+}
+
+@media (max-width: 880px) {
+    .rsk-skills-grid {
+        grid-template-columns: 1fr;
+    }
+}

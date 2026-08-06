@@ -1,0 +1,109 @@
+.rsk-contact-band {
+    background: var(--indigo);
+    border-top: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
+    transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.rsk-contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 104px 32px;
+}
+
+/* The indigo band is bright — force cream/dark chapter marks that read well */
+.rsk-contact-chapter .rsk-chapter-num.contact {
+    color: var(--yellow);
+}
+
+.rsk-contact-chapter .rsk-chapter-rule.contact {
+    background: #FFFFFF;
+    opacity: 0.85;
+}
+
+.rsk-eyebrow.contact {
+    color: #FFFFFF;
+    opacity: 0.85;
+}
+
+.rsk-contact-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(2.4rem, 8vw, 4.4rem);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    line-height: 0.98;
+    margin-bottom: 22px;
+    letter-spacing: -0.015em;
+}
+
+.rsk-contact-sub {
+    color: var(--contact-sub);
+    font-size: 16px;
+    max-width: 48ch;
+    margin-bottom: 44px;
+    line-height: 1.55;
+}
+
+.rsk-contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.rsk-contact-card {
+    background: #F2F0FB;
+    border: 3px solid #12121A;
+    border-radius: 14px;
+    padding: 22px 26px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 6px 6px 0 #12121A;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+    flex: 1;
+    min-width: 240px;
+    color: #12121A;
+}
+
+.rsk-contact-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 10px 10px 0 #12121A;
+}
+
+.rsk-contact-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #12121A;
+    color: #F2F0FB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.rsk-contact-card-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: #5B5A6B;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2px;
+}
+
+.rsk-contact-card-value {
+    font-weight: 700;
+    font-size: 15px;
+    word-break: break-word;
+    color: #12121A;
+}
+
+@media (max-width: 520px) {
+    .rsk-contact-inner {
+        padding: 72px 20px;
+    }
+}
